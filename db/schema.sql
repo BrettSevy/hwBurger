@@ -3,8 +3,8 @@ USE burgers_db;
 
 CREATE TABLE burgers
 (
-	id int NOT NULL AUTO_INCREMENT,
-	burger varchar(100) NOT NULL,
+	id int AUTO_INCREMENT,
+	burger varchar(100),
 	eaten BOOLEAN DEFAULT false,
 	PRIMARY KEY (id)
 );
