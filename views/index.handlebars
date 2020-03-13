@@ -1,47 +1,51 @@
-<h1>Burgers</h1>
+<div class="container">
+  <div class="row header text-center">
+    <!-- header -->
+    <img class="img-responsive icon" src="./assets/img/burger.png">
+    <h1>Eat-da-Burger!</h1>
+    <h2>Welcome</h2>
 
-<div class="row">
-  <container class="card bg-danger mb-3" "col-5">
-    <div class="card-header">Burgers you have not eaten.</div>
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text">
-        {{#each burgers}}
-        {{#unless eaten}}
-        {{> burgers/burger-block eaten=true}}
-        {{/unless}}
-        {{/each}}</p>
-    </div>
-  </container>
+    <p class="instructions">Click the knife and fork to eat any burger in stock. Click the waiter to order more of any
+      burger out of stock. Don't see a burger you want to eat? Order your very own one-of-a-kind burger below.</p>
+  </div> <!-- header row -->
 
-  <container class="card bg-warning mb-3" "col-5">
-    <div class="card-header">Burgers that you have eaten.</div>
-    <div class="card-body">
-      <h5 class="card-title"></h5>
-      <p class="card-text"> 
-        {{#each burgers}}
-        {{#if eaten}}
-        {{> burgers/burger-block eaten=false}}
-        {{/if}}
-        {{/each}}</p>
-    </div>
-  </container>
-</div>
+  <div class="row orderup  text-center">
+    <input type="text" class="form-control" id="name" placeholder="My custom burger is called..."><button
+      type="submit" id="submit">Order up!</button>
+  </div> <!-- survey row -->
 
+  <div class="row">
+    <!-- burgers -->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <!-- left column -->
+      <h1 id="left">To Be Eaten...</h1>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <div class="burgerblock">
+        <img src="./assets/img/burger.png" class="tinyicon burgericon"><img src="./assets/img/eat.png"
+          class="tinyicon eaticon" data-id="{{this.id}}">
+        <h2>{{burger_name}}</h2>
+      </div>
+      {{/unless}}
+      {{/each}}
+    </div> <!-- left column -->
 
-<h2>Try A New Burger</h2>
-<form class="create-form">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <!-- right column -->
+      <h1 id="right">Already Devoured!</h1>
+      {{#each burgers}}
+      {{#if devoured}}
+      <div class="burgerblock">
+        <img src="./assets/img/burger.png" class="tinyicon burgericon eaten"><img src="./assets/img/waiter.png"
+          class="tinyicon waitericon" data-id="{{this.id}}">
+        <h2>{{burger_name}}</h2>
+      </div>
+      {{/if}}
+      {{/each}}
+    </div> <!-- right column -->
+  </div> <!-- burgers row -->
 
-  <div class="form-group">
-    <label for="ca">Burger Name</label>
-    <input type="text" id="ca" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="eaten">Have you eaten this burger before?</label><br>
-    <input type="radio" name="eaten" value="1"> Yes
-    <input type="radio" name="eaten" value="0" checked> No<br>
-  </div>
-
-  <button type="submit">Add the Burger</button>
-</form>
+  <div class="row text-center">
+    <!-- footer -->
+  </div> <!-- footer row -->
+</div> <!-- container -->

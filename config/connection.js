@@ -1,35 +1,28 @@
-
-const mysql = require("mysql2");
-
-// const connection = mysql.createConnection({
-//   host: "localhost",
-//   port: 3306,
-//   user: "root",
-//   password: "root",
-//   database: "burgers_db"
-// });
-
+// initialize Node.js package
+var mysql = require("mysql");
 var connection;
-if (process.env.JAWSDB_URL){
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
 
+// if connecting remotely, use JawsDB
+if (process.env.JAWSDB_URL) {
+	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-  connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "root",
-  database: "burgers_db"
-});
+	// creates MySQL server connection
+	connection = mysql.createConnection({
+	    port: 3306,
+	    host: "localhost",
+	    user: "root",
+	    password: "root",
+	    database: "burgers_db"
+	});
 }
 
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
+// connects to MySQL server
+connection.connect(function(error) {
+    if (error) {
+      console.error("MYSQL CONNECTION ERROR: " + error);
+    }
+    console.log("Connected to MySQL server.");
 });
 
-
+// exports connection
 module.exports = connection;
