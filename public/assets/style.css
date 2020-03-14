@@ -3,7 +3,8 @@
 body {
 	font-family: 'Rock Salt', cursive;
 	font-size: 15px;
-	background-color: dimgray;
+	background-color: wheat;
+	color: #B6850D;
 	
 }
 
@@ -15,9 +16,9 @@ div.container {
 div.burgerblock {
 	margin: 10px auto;
 	padding: 5px 10px 0px 10px;
-	background-color: black;
+	background-color: #CBAB54;
+	color: black;
 	border-radius: 15px;
-	color: white
 }
 
 /* ------------------------------------ MISCELLANEOUS */
@@ -27,6 +28,7 @@ input.form-control {
 	width: 75%;
 	margin: 10px auto auto auto;
 	font-size: 15px;
+	background-color: #faebd7;
 }
 
 button {
@@ -38,6 +40,7 @@ button {
 	font-size: 17px;
 	border: none;
 	border-radius: 5px;
+	background-color: #CBAB54;
 	color: black;
 
 }
