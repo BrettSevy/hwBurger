@@ -1,8 +1,10 @@
 /* ------------------------------------ GENERAL */
 
 body {
-	font-family: "Mina", sans-serif;
+	font-family: 'Rock Salt', cursive;
 	font-size: 15px;
+	background-color: dimgray;
+	
 }
 
 div.container {
@@ -13,8 +15,9 @@ div.container {
 div.burgerblock {
 	margin: 10px auto;
 	padding: 5px 10px 0px 10px;
-	background-color: #fffbc6;
+	background-color: black;
 	border-radius: 15px;
+	color: white
 }
 
 /* ------------------------------------ MISCELLANEOUS */
@@ -35,6 +38,8 @@ button {
 	font-size: 17px;
 	border: none;
 	border-radius: 5px;
+	color: black;
+
 }
 
 /* ------------------------------------ IMAGES */
