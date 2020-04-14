@@ -33,4 +33,4 @@ Heroku Deployment : [Eat the burgers](https://intense-shore-00387.herokuapp.com/
 
 # Author
 
-Brett Sevy 
+[Brett Sevy](https://github.com/BrettSevy)
