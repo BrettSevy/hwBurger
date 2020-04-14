@@ -1,4 +1,4 @@
-# Eat-Da-Burgers
+# Eat the Burgers
 <h4 align="center">Node, Express, Handebars, MySQL</h4>
 
 ![burger](public/assets/img/screenshot.png)
